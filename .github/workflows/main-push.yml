@@ -19,7 +19,7 @@ jobs:
         fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
     - name: Set up Python 3.9
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: 3.9
     - name: Install Trestle
@@ -28,28 +28,6 @@ jobs:
       run: source scripts/automation/release.sh
     - name: Push the changes
       run: bash scripts/automation/push.sh
-  downstream-repo-update:
-    name: Update downstream repositories - cd
-    runs-on: ubuntu-latest
-    needs: release
-    steps:
-    - name: Clone branch
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-        ref: main
-        token: ${{ secrets.PUSH_TOKEN }}
-    - name: Clone downstream repo
-      uses: actions/checkout@v2
-      with:
-        repository: oscal-compass/e2e-demo-profile
-        path: './e2e-demo-profile'
-        token: ${{ secrets.PUSH_TOKEN }}
-        fetch-depth: 0
-    - name: Update profiles
-      run: bash scripts/automation/update_profile.sh
-      env:
-        GH_TOKEN: ${{ secrets.PUSH_TOKEN }}
   merge-main-to-develop:
     name: Merge main to develop
     runs-on: ubuntu-latest

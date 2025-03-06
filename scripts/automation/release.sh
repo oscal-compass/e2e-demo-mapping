@@ -1,5 +1,5 @@
 version_tag=$(semantic-release print-version)
-echo "Bumping version of profiles to ${version_tag}" 
+echo "Bumping version of mappings to ${version_tag}" 
 export VERSION_TAG="$version_tag"
 echo "VERSION_TAG=${VERSION_TAG}" >> $GITHUB_ENV
 ./scripts/automation/assemble_catalogs.sh $version_tag

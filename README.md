@@ -1,20 +1,19 @@
-# e2e-demo-catalog
-Repository to demo oscal based catalog and agile authoring using compliance-trestle and github actions
+# e2e-demo-mappings
+Repository to demo mappings
 
 The [demo overview](https://github.com/oscal-compass/e2e-demo).
 
 What this repo does:
 
-This repo ingests industry standard catalogs and provides a mechanism to generate an opinionated control set which is then leveraged by the profile repo.
+This repo currently just holds a data folder comprising mapping document(s). In the future mapping documents can be used to map control between programs.
 
-1. Input: It was initialized with OSCAL catalog.json.
+Example mapping document
 
-2. Processing: Changes to either the catloag.json or markdown files and creation of PR to merge these changes into develop will result in catalog generate/assemble.
-
-3. Output: Updated catalog.json in catalog repo
-
-4. Next action: Updated catalog.json pushed to profile repo
-
-Demo for this repo:
-
-- Show changes to markdown are incorporated into catloag.json
+<table>
+<tr>
+<td padding="15px">local copy
+<td padding="15px"><a href="data/sp800-53r5-to-iso-27001-mapping.docx">sp800-53r5-to-iso-27001-mapping</a>
+<tr>
+<td padding="15px">original
+<td padding="15px"><a href="https://csrc.nist.rip/csrc/media/publications/sp/800-53/rev-5/final/documents/sp800-53r5-to-iso-27001-mapping.docx">sp800-53r5-to-iso-27001-mapping</a>
+</table>
