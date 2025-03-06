@@ -5,9 +5,9 @@ The [demo overview](https://github.com/oscal-compass/e2e-demo).
 
 What this repo does:
 
-This repo currently just holds a data folder comprising mapping document(s). In the future mapping documents can be used to map control between programs.
+This repo hold a data folder comprising mapping document(s). In the future mapping documents can be used to map controls between programs.
 
-Example mapping document
+##### Example mapping document
 
 <table>
 <tr>
